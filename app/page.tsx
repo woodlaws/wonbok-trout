@@ -1,0 +1,19 @@
+import Image from "next/image";
+import Link from "next/link";
+import { ArrowRight, ExternalLink } from "lucide-react";
+import { ConceptImage, ProductCard } from "@/components/content";
+import { links, products } from "@/data/site";
+
+export default function Home() {
+  return <main id="main-content">
+    <section className="hero">
+      <div className="hero-media"><Image src="/images/concept-farm-hero.png" alt="맑은 물이 흐르는 산간 송어 양식장과 송어회 연출 시안" fill priority sizes="100vw" /><span className="hero-note">연출 시안 · 실제 사진 교체 예정</span></div>
+      <div className="hero-content"><p className="eyebrow light">PYEONGCHANG · MITAN</p><h1>평창의 물에서 기른 송어,<br />집에서도 맛있게</h1><p className="subhead">송어회·송어포부터 송어액젓까지</p><div className="hero-actions"><Link className="button button-coral" href="/trout">송어 구매하기 <ArrowRight aria-hidden="true" /></Link><Link className="button button-light" href="/sauce">송어액젓 보기 <ArrowRight aria-hidden="true" /></Link></div></div>
+    </section>
+    <section className="section section-cream"><div className="shell"><div className="section-heading"><div><p className="eyebrow">FROM FARM TO TABLE</p><h2>평창 송어를<br />식탁 가까이</h2></div><a className="text-link" href={links.store} target="_blank" rel="noreferrer">스마트스토어에서 구매 <ExternalLink aria-hidden="true" /></a></div><div className="product-grid">{products.map((product)=><ProductCard key={product.slug} product={product} />)}</div></div></section>
+    <section className="split"><ConceptImage src="/images/concept-farm-hero.png" alt="산과 맑은 물이 보이는 송어 양식장 연출 시안" /><div className="split-copy"><p className="eyebrow light">THE FARM</p><h2>한 사람의 60년과<br />양식장의 시간을<br />구분해 기록합니다.</h2><p>함준식 대표는 1965년 국내 송어 양식 사업의 첫 단계부터 참여했습니다. 원복송어양식장이 평창 미탄면 현재 터에 자리 잡은 시점은 그보다 뒤입니다.</p><Link className="button button-light" href="/farm">양식장 이야기 읽기 <ArrowRight aria-hidden="true" /></Link></div></section>
+    <section className="split reverse"><div className="split-copy cream"><p className="eyebrow">A SPOONFUL OF UMAMI</p><h2>국물부터 무침까지,<br />송어액젓 한 숟갈</h2><p>무지개송어액젓과 차가버섯 송어액젓을 국·찌개, 나물, 겉절이, 볶음 요리에 활용해 보세요. 실제 제품 병과 라벨은 스마트스토어에서 확인할 수 있습니다.</p><div className="pill-list"><span>국 · 찌개</span><span>나물 · 무침</span><span>김치 양념</span><span>볶음 요리</span></div><Link className="button button-dark" href="/sauce">액젓과 활용법 보기 <ArrowRight aria-hidden="true" /></Link></div><ConceptImage src="/images/concept-trout-table.png" alt="송어회와 조리한 송어를 차린 식탁 연출 시안" /></section>
+    <section className="split"><ConceptImage src="/images/concept-apple-orchard.png" alt="평창 산자락 사과 농장과 팜크닉 연출 시안" /><div className="split-copy"><p className="eyebrow light">PYEONGCHANG SARANG</p><h2>계절을 따라 만나는<br />평창의 농장과 물</h2><p>송어낚시, 사과 수확, 힐링 팜크닉은 계절에 따라 운영됩니다. 현재 날짜와 예약 가능 여부는 확정 정보로 표시하지 않고 운영 일정 문의로 안내합니다.</p><Link className="button button-light" href="/experience">계절 체험 살펴보기 <ArrowRight aria-hidden="true" /></Link></div></section>
+    <section className="section"><div className="shell"><div className="section-heading"><div><p className="eyebrow">STORIES</p><h2>양식과 요리,<br />그리고 평창 이야기</h2></div></div><div className="story-grid"><article className="story-card"><div><p className="eyebrow light">양식</p><h3>차가운 물에서 송어가 자라는 시간</h3><p>원복송어 블로그의 기록으로 이어집니다.</p></div><a className="text-link" href={links.blog} target="_blank" rel="noreferrer">블로그에서 보기 <ExternalLink aria-hidden="true" /></a></article><article className="story-card"><div><p className="eyebrow">요리</p><h3>송어포 한 팩으로 시작하는 집밥</h3><p>구이, 샐러드, 덮밥 등 송어포 활용 콘텐츠를 차곡차곡 담을 자리입니다.</p></div><Link className="text-link" href="/stories">이야기 목록 <ArrowRight aria-hidden="true" /></Link></article><article className="story-card"><div><p className="eyebrow">평창</p><h3>체험과 함께 묶어 보는 미탄면 여행</h3><p>체험 운영 여부를 먼저 확인한 뒤 주변 여행을 계획해 보세요.</p></div><Link className="text-link" href="/travel">여행 정보 <ArrowRight aria-hidden="true" /></Link></article></div></div></section>
+  </main>;
+}
