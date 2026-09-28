@@ -4,5 +4,57 @@ import { notFound } from "next/navigation";
 import { StoreCta } from "@/components/content";
 import { products } from "@/data/site";
 export function generateStaticParams(){return products.map(({slug})=>({slug}))}
-export async function generateMetadata({params}:{params:Promise<{slug:string}>}):Promise<Metadata>{const {slug}=await params;const product=products.find((item)=>item.slug===slug);return product?{title:product.name,description:product.description}:{}}
-export default async function ProductPage({params}:{params:Promise<{slug:string}>}){const {slug}=await params;const product=products.find((item)=>item.slug===slug);if(!product)notFound();return <main id="main-content"><section className="product-detail shell"><div className={`product-detail-media ${!product.image?"text-only":""}`}>{product.image?<><Image src={product.image} alt={`${product.name} 연출 시안`} fill priority sizes="(max-width: 720px) 100vw, 50vw" style={{objectPosition:product.imagePosition}}/><span className="hero-note">연출 시안 · 실제 제품 사진 교체 예정</span></>:<div><p className="eyebrow light">실제 제품 사진 준비 중</p><strong>{product.name}</strong><p>확정된 병과 라벨 이미지는 스마트스토어에서 확인해 주세요.</p></div>}</div><div className="product-detail-copy"><p className="eyebrow">{product.category}</p><h1>{product.name}</h1><p className="lead">{product.description}</p><div className="detail-block"><h2>확인된 판매 용량</h2><p>{product.sizes.join(" · ")}</p></div><div className="detail-block"><h2>활용 방법</h2><ul>{product.usage.map((item)=><li key={item}>{item}</li>)}</ul></div><div className="notice">가격·재고·배송 조건은 변경될 수 있어 이 페이지에 고정하지 않았습니다. 구매 전 스마트스토어에서 확인해 주세요.</div><a className="button button-coral" href={product.storeUrl} target="_blank" rel="noreferrer" style={{marginTop:"1.5rem"}}>스마트스토어에서 확인</a></div></section><StoreCta title={`${product.name}의 최신 판매 정보를 확인하세요`}/></main>}
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await params;
+  const product = products.find((item) => item.slug === slug);
+  if (!product) return {};
+
+  const detail = product.composition ?? product.sizes.join(" · ");
+  return {
+    title: product.name,
+    description: `${product.name} ${detail}. ${product.short} 먹는 방법과 구매 정보를 확인하세요.`,
+  };
+}
+
+export default async function ProductPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const product = products.find((item) => item.slug === slug);
+  if (!product) notFound();
+
+  return (
+    <main id="main-content">
+      <section className="product-detail shell">
+        <div className={`product-detail-media ${!product.image ? "text-only" : ""}`}>
+          {product.image ? (
+            <>
+              <Image src={product.image} alt={product.imageAlt ?? product.name} fill priority sizes="(max-width: 720px) 100vw, 50vw" style={{ objectPosition: product.imagePosition }} />
+              {product.imageIsConcept ? <span className="hero-note">연출 시안 · 실제 제품 사진 교체 예정</span> : null}
+            </>
+          ) : (
+            <div>
+              <p className="eyebrow light">실제 제품 사진 준비 중</p>
+              <strong>{product.name}</strong>
+              <p>확정된 제품 이미지는 스마트스토어에서 확인해 주세요.</p>
+            </div>
+          )}
+        </div>
+        <div className="product-detail-copy">
+          <p className="eyebrow">{product.category}</p>
+          <h1>{product.name}</h1>
+          <p className="lead">{product.description}</p>
+          <div className="detail-summary" aria-label={`${product.name} 확인 정보`}>
+            <div><span>상품</span><strong>{product.name}</strong></div>
+            <div><span>확인된 구성</span><strong>{product.composition ?? product.sizes.join(" · ")}</strong></div>
+          </div>
+          <div className="detail-block">
+            <h2>이렇게 드세요</h2>
+            <ul>{product.usage.map((item) => <li key={item}>{item}</li>)}</ul>
+          </div>
+          <div className="notice">가격·재고·배송 조건은 변경될 수 있어 이 페이지에 고정하지 않았습니다. 구매 전 스마트스토어의 최신 정보를 확인해 주세요.</div>
+          <a className="button button-coral product-buy-button" href={product.storeUrl} target="_blank" rel="noreferrer">{product.name} 구매 정보 확인</a>
+        </div>
+      </section>
+      <StoreCta title={`${product.name}의 최신 판매 정보를 확인하세요`} href={product.storeUrl} />
+    </main>
+  );
+}

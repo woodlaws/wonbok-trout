@@ -17,8 +17,8 @@ export function ProductCard({ product }: { product: Product }) {
     <article className={`product-card ${!product.image ? "product-card-text" : ""}`}>
       {product.image ? (
         <div className="product-card-image">
-          <Image src={product.image} alt={`${product.name} 연출 시안`} fill sizes="(max-width: 720px) 100vw, 25vw" style={{ objectPosition: product.imagePosition }} />
-          <span className="image-note">연출 시안</span>
+          <Image src={product.image} alt={product.imageAlt ?? product.name} fill sizes="(max-width: 720px) 100vw, 25vw" style={{ objectPosition: product.imagePosition }} />
+          {product.imageIsConcept ? <span className="image-note">연출 시안</span> : null}
         </div>
       ) : (
         <div className="product-symbol" aria-hidden="true"><span>熟</span><i /></div>
@@ -27,9 +27,10 @@ export function ProductCard({ product }: { product: Product }) {
         <p className="product-category">{product.category}</p>
         <h3>{product.name}</h3>
         <p>{product.short}</p>
-        <div className="product-card-meta">
-          <span>{product.sizes.join(" · ")}</span>
-          <Link href={`/products/${product.slug}`}>자세히 보기 <ArrowRight aria-hidden="true" /></Link>
+        <p className="product-composition">{product.composition ?? product.sizes.join(" · ")}</p>
+        <div className="product-card-actions">
+          <Link className="button button-light" href={`/products/${product.slug}`}>자세히 보기 <ArrowRight aria-hidden="true" /></Link>
+          <a className="button button-coral" href={product.storeUrl} target="_blank" rel="noreferrer">구매하기 <ExternalLink aria-hidden="true" /></a>
         </div>
       </div>
     </article>
@@ -46,11 +47,11 @@ export function PageIntro({ eyebrow, title, description }: { eyebrow: string; ti
   );
 }
 
-export function StoreCta({ title = "최신 판매 정보는 스마트스토어에서 확인하세요" }: { title?: string }) {
+export function StoreCta({ title = "최신 판매 정보는 스마트스토어에서 확인하세요", href = "https://smartstore.naver.com/trout88" }: { title?: string; href?: string }) {
   return (
     <section className="store-cta shell">
       <div><p className="eyebrow light">SHOP ONLINE</p><h2>{title}</h2><p>가격, 재고, 배송 조건은 구매 시점의 스마트스토어 정보가 기준입니다.</p></div>
-      <a className="button button-coral" href="https://smartstore.naver.com/trout88" target="_blank" rel="noreferrer">스마트스토어 열기 <ExternalLink aria-hidden="true" /></a>
+      <a className="button button-coral" href={href} target="_blank" rel="noreferrer">스마트스토어 열기 <ExternalLink aria-hidden="true" /></a>
     </section>
   );
 }

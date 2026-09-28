@@ -24,6 +24,9 @@ export type Product = {
   description: string;
   sizes: string[];
   usage: string[];
+  composition?: string;
+  imageAlt?: string;
+  imageIsConcept?: boolean;
   image?: string;
   imagePosition?: string;
   storeUrl: string;
@@ -39,8 +42,11 @@ export const products: Product[] = [
     description:
       "집에서도 편하게 차려낼 수 있도록 손질한 송어회입니다. 가격·재고·배송일은 스마트스토어의 최신 정보를 확인해 주세요.",
     sizes: ["400g"],
+    composition: "손질 송어회 400g",
     usage: ["채소와 초장에 곁들여 송어회로", "간장과 고추냉이로 담백하게"],
     image: "/images/concept-trout-table.png",
+    imageAlt: "채소와 함께 차린 송어회 연출 시안",
+    imageIsConcept: true,
     imagePosition: "35% center",
     storeUrl: links.store,
   },
@@ -52,8 +58,11 @@ export const products: Product[] = [
     description:
       "구이·샐러드·덮밥 등 여러 요리에 활용하기 좋은 송어포입니다. 가격·재고·배송일은 스마트스토어에서 확인해 주세요.",
     sizes: ["400g"],
+    composition: "손질 송어포 400g",
     usage: ["팬에 노릇하게 구워 한 끼로", "샐러드나 덮밥의 단백질로"],
     image: "/images/concept-trout-table.png",
+    imageAlt: "구이와 덮밥에 활용하는 송어포 연출 시안",
+    imageIsConcept: true,
     imagePosition: "82% center",
     storeUrl: links.store,
   },
