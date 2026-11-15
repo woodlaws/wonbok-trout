@@ -1,0 +1,358 @@
+{
+  "flags": {
+    "showUnconfirmed": false
+  },
+  "brand": {
+    "name": "원복송어",
+    "tagline": "평창 1급수에서 61년, 송어 한 길",
+    "eyebrow": "대한민국 1호 송어 가업 · SINCE 1965",
+    "heroText": "1965년 국내 첫 송어양식을 이끈 함준식 박사의 양식장. 청옥산 육백마지기 아래 찬 용천수로 키운 송어와, 그 송어로 담가 동굴에서 5년 숙성한 송어액젓을 산지에서 바로 보내드립니다."
+  },
+  "links": {
+    "store": "https://smartstore.naver.com/durepcsarang",
+    "storeLegacy": "https://smartstore.naver.com/trout88",
+    "blogWonbok": "https://blog.naver.com/papatrout",
+    "blogPyeongchangSarang": "https://blog.naver.com/durepcsarang",
+    "instagram": "https://www.instagram.com/pyeongchang_love/",
+    "threads": "https://www.threads.com/@pyeongchang_love",
+    "youtube": "https://www.youtube.com/channel/UC-KDPpRZH7SC60-ojmpa83g",
+    "kakao": "http://pf.kakao.com/_Ccpys/chat",
+    "cafe": "https://cafe.naver.com/pyeongchang1",
+    "tourDure": "https://in700.imweb.me/",
+    "naverMap": "https://map.naver.com/p/entry/place/1855778444",
+    "inpock": "https://link.inpock.co.kr/wonbok88"
+  },
+  "contact": {
+    "farmName": "원복송어양식장",
+    "address": "",
+    "addressConfirm": true,
+    "phone": "",
+    "phoneConfirm": true,
+    "closed": "매주 일요일",
+    "amenities": "무료 주차 · 단체 이용 · 예약 가능",
+    "direction": {
+      "text": "",
+      "confirm": true
+    }
+  },
+  "companies": [
+    {
+      "name": "원복송어",
+      "ceo": "함준식",
+      "bizNo": "879-63-00304",
+      "mailOrderNo": "2020-강원평창-0136",
+      "address": "강원특별자치도 평창군 미탄면 송어길 54"
+    },
+    {
+      "name": "평창사랑 주식회사 농업회사법인",
+      "ceo": "함영식",
+      "note": "평창 관광두레 주민사업체",
+      "address": "강원 평창군 대화면 문화택지길 41-12",
+      "phone": "010-5272-9829"
+    }
+  ],
+  "numbers": [
+    {
+      "big": "1965",
+      "unit": "년",
+      "label": "국내 첫 송어양식 시도"
+    },
+    {
+      "big": "61",
+      "unit": "년",
+      "label": "송어만 키워온 가업"
+    },
+    {
+      "big": "1",
+      "unit": "급수",
+      "label": "육백마지기에서 흘러온 창리천"
+    },
+    {
+      "big": "5",
+      "unit": "년",
+      "label": "다수리 동굴 숙성 송어액젓"
+    }
+  ],
+  "proof": [
+    {
+      "year": "1984",
+      "text": "철탑산업훈장"
+    },
+    {
+      "year": "1990",
+      "text": "송어양식협회 초대 회장"
+    },
+    {
+      "year": "2025",
+      "text": "무항생제 송어 협약"
+    }
+  ],
+  "timeline": [
+    {
+      "year": "1965",
+      "text": "캘리포니아 송어 종란 1만 개로 화천댐 아래에서 국내 첫 양식 시도 (함준식, 실무 책임)"
+    },
+    {
+      "year": "1965",
+      "text": "평창읍 상리로 옮겨 도립양어장 설치"
+    },
+    {
+      "year": "1976",
+      "text": "평창 도립양어장, 송어 연중 부화 성공 · 종란 자체 채란·부화"
+    },
+    {
+      "year": "1990",
+      "text": "송어양식협회 창립, 함준식 초대 회장"
+    },
+    {
+      "year": "2002",
+      "text": "동생 함영식, 양식장 합류"
+    },
+    {
+      "year": "2017",
+      "text": "평창읍 다수리 동굴에서 송어액젓 자연 숙성 시작"
+    },
+    {
+      "year": "2019",
+      "text": "네팔 송어양식 기업 초청, 양식 기술 전수"
+    },
+    {
+      "year": "2021",
+      "text": "양식장 안 송어 가공공장(111㎡) 신축"
+    },
+    {
+      "year": "2022",
+      "text": "송어탕 · 송어액젓 출시 (평창 송어 가공식품 최초 개발 보도)"
+    },
+    {
+      "year": "2025",
+      "text": "한국송어협회 송어 무항생제 인증 설명회 및 업무협약 (10.29)"
+    }
+  ],
+  "products": [
+    {
+      "slug": "rainbow-trout-fish-sauce",
+      "featured": true,
+      "name": "평창무지개송어액젓",
+      "sizes": [
+        "250ml",
+        "500ml"
+      ],
+      "tag": "BEST · 리뷰 17",
+      "short": "동굴에서 5년 숙성. 김장·겉절이·찌개 한 스푼.",
+      "priceNote": "34,900원~ (정가 37,900원, 2026.11.15 스토어 기준)",
+      "storeUrl": "https://smartstore.naver.com/durepcsarang/products/12705348216",
+      "image": "aekjeot_two.jpg",
+      "ingredients": "정제수 71.5%, 무지개송어(국내산) 20%, 천일염 8.5%",
+      "shelfLife": "제조일로부터 2년"
+    },
+    {
+      "slug": "chaga-trout-fish-sauce",
+      "featured": true,
+      "name": "평창무지개송어차가버섯액젓",
+      "sizes": [
+        "250ml",
+        "500ml"
+      ],
+      "tag": "평창 차가버섯",
+      "short": "송어액젓의 감칠맛에 차가버섯의 은은한 풍미.",
+      "priceNote": "46,900원~ (정가 49,900원, 2026.11.15 스토어 기준)",
+      "storeUrl": "https://smartstore.naver.com/durepcsarang/products/12708476931",
+      "image": "aekjeot_set.jpg",
+      "ingredients": "무지개송어(국내산), 차가버섯 (상세 성분은 스토어 확인)",
+      "shelfLife": "제조일로부터 2년"
+    }
+  ],
+  "howto": [
+    {
+      "icon": "🥬",
+      "title": "김장 · 겉절이",
+      "text": "평창 고랭지 배추와 함께. 채소 단맛이 살아납니다."
+    },
+    {
+      "icon": "🍲",
+      "title": "된장찌개 · 국",
+      "text": "소금 대신 한 스푼. 국물 맛이 깊어집니다."
+    },
+    {
+      "icon": "🍳",
+      "title": "나물 · 볶음",
+      "text": "무침과 볶음밥 간을 맞출 때."
+    }
+  ],
+  "wholesale": {
+    "title": "전국 횟집·식당이 찾는 산지 양식장 송어",
+    "points": [
+      "양식장 직거래로 활송어 · 손질 송어 공급",
+      "송어 요리를 하는 셰프 레스토랑 납품 경험",
+      "송어액젓 업소용 대용량 상담",
+      "단체 · 행사 · 선물세트 주문"
+    ],
+    "cases": []
+  },
+  "experience": {
+    "intro": "함영식 대표가 이끄는 평창사랑은 귀농·귀촌 농가가 함께 만든 관광두레 주민사업체입니다. 양식장과 농장을 잇는 체류형 체험을 운영합니다.",
+    "slogan": "食·休·耕 평창에서 먹고, 쉬고, 일구다",
+    "steps": [
+      {
+        "no": 1,
+        "title": "평창사랑 본부 오리엔테이션",
+        "text": "평창 이야기와 하루 일정 안내",
+        "image": null
+      },
+      {
+        "no": 2,
+        "title": "광천선굴 탐방",
+        "text": "석회 동굴 속 시원한 산책",
+        "image": "cave.jpg"
+      },
+      {
+        "no": 3,
+        "title": "송어 낚시 체험",
+        "text": "원복송어양식장 · 플라이낚시와 송어 미식",
+        "image": "icefish.jpg"
+      },
+      {
+        "no": 4,
+        "title": "평창올림픽시장 투어",
+        "text": "메밀 음식으로 점심 한 끼",
+        "image": "memil.jpg"
+      },
+      {
+        "no": 5,
+        "title": "사과 힐링 팜크닉",
+        "text": "천지애농원 사과따기 · 황톳길 · 족욕",
+        "image": "apple.jpg"
+      }
+    ],
+    "courses": [
+      {
+        "title": "당일 코스",
+        "text": "1 → 5 순서로 하루 일정"
+      },
+      {
+        "title": "1박 2일 코스",
+        "text": "당일 일정 + 강가 펜션 숙박 + 여유로운 둘째 날"
+      },
+      {
+        "title": "계절 꾸러미",
+        "text": "감자·옥수수·사과·봄나물 + 송어회·송어액젓·송어탕"
+      }
+    ],
+    "operatingConfirm": true
+  },
+  "travel": {
+    "near": [
+      {
+        "name": "청옥산 육백마지기",
+        "area": "미탄면",
+        "text": "해발 1,256m 고원. 여름엔 샤스타데이지, 밤엔 쏟아지는 별. 원복송어의 물이 시작되는 곳.",
+        "image": null
+      },
+      {
+        "name": "창리천 1급수 계곡",
+        "area": "미탄면",
+        "text": "청옥산 아래로 흐르는 맑은 물. 원복송어를 키우는 물길.",
+        "image": "stream.jpg"
+      },
+      {
+        "name": "천지애농원",
+        "area": "평창사랑 회원",
+        "text": "고랭지 사과 따기, 황톳길 걷기와 족욕, 사과·산양삼 피자 만들기.",
+        "image": "apple.jpg"
+      }
+    ],
+    "famous": [
+      {
+        "name": "광천선굴",
+        "area": "대화면",
+        "text": "평창사랑 당일 코스에 포함된 석회 동굴.",
+        "image": "cave.jpg"
+      },
+      {
+        "name": "대관령 양떼목장",
+        "area": "대관령면",
+        "text": "푸른 초원 위 양 떼.",
+        "image": "sheep.jpg"
+      },
+      {
+        "name": "오대산 · 월정사 선재길",
+        "area": "진부면",
+        "text": "전나무 숲과 계곡을 따라 걷는 국립공원 길.",
+        "image": "odaesan.jpg"
+      },
+      {
+        "name": "발왕산",
+        "area": "대관령면",
+        "text": "케이블카로 오르는 평창의 하늘. 겨울 상고대.",
+        "image": "balwang.jpg"
+      },
+      {
+        "name": "평창송어축제",
+        "area": "진부면 · 겨울",
+        "text": "언 오대천 위 얼음 낚시.",
+        "image": "troutfest.jpg"
+      },
+      {
+        "name": "평창올림픽시장",
+        "area": "평창읍",
+        "text": "메밀전병, 메밀부침.",
+        "image": null
+      }
+    ],
+    "foods": [
+      "평창 송어",
+      "대관령 한우",
+      "고랭지 사과",
+      "감자 · 옥수수",
+      "고랭지 절임배추",
+      "메밀"
+    ],
+    "travelTimeNote": "양식장 기준 이동 시간은 실제 측정 후 입력"
+  },
+  "news": [
+    {
+      "source": "인스타그램",
+      "title": "송어 무항생제 인증 설명회 및 업무협약 체결",
+      "date": "2025.10.29",
+      "image": "mou.jpg",
+      "url": "https://www.instagram.com/p/DQdnUAnkbM0/"
+    },
+    {
+      "source": "블로그",
+      "title": "좋은 액젓 하나가 음식 맛을 바꿉니다. 평창무지개송어액젓 이야기",
+      "date": "2026.07.07",
+      "image": "aekjeot_set.jpg",
+      "url": "https://blog.naver.com/papatrout"
+    },
+    {
+      "source": "인스타그램",
+      "title": "수원메가쇼 2024, 평창무지개송어액젓 출품",
+      "date": "2024.12",
+      "image": "megashow.jpg",
+      "url": "https://www.instagram.com/p/DDL4oe9yWO4/"
+    },
+    {
+      "source": "인스타그램",
+      "title": "강원도경제진흥원 후원 라이브커머스 방송",
+      "date": "2025",
+      "image": "live.jpg",
+      "url": "https://www.instagram.com/p/DQdYYyGkcSe/"
+    }
+  ],
+  "press": [
+    {
+      "media": "강원도민일보",
+      "date": "2023.11.01",
+      "title": "[오래된 미래 강원 노포 탐방] 63. 평창 원복 송어양식장",
+      "url": "https://www.kado.net/news/articleView.html?idxno=1211331"
+    },
+    {
+      "media": "강원도민일보",
+      "date": "2022.08.24",
+      "title": "평창 송어가공식품 최초 개발 시판 본격화",
+      "url": "https://www.kado.net/news/articleView.html?idxno=1141212"
+    }
+  ],
+  "photoCredits": "wikimedia_credits.json 참고. 원복송어 사진: 대표님 인스타그램(@pyeongchang_love) · 스마트스토어 · 강원도민일보(사용 허락 확인 필요)"
+}

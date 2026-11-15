@@ -1,36 +1,22 @@
-import type { Metadata } from "next";
-import "./globals.css";
-import { Footer, Header, MobileBuyBar } from "@/components/site-shell";
-import { siteUrl } from "@/data/config";
+import type { Metadata } from 'next';
+import { Header, Footer } from './sections';
+import { address, brand, contact, phone, siteOrigin } from './site';
+import './globals.css';
 
 export const metadata: Metadata = {
-  metadataBase: new URL(siteUrl),
-  title: {
-    default: "원복송어 | 평창 미탄면 송어 양식 브랜드",
-    template: "%s | 원복송어",
-  },
-  description:
-    "평창 미탄면에서 기른 송어회·송어포와 무지개송어액젓·차가버섯 송어액젓을 소개합니다.",
-  icons: {
-    icon: "/favicon.svg",
-    shortcut: "/favicon.svg",
-  },
+  metadataBase: new URL(siteOrigin()),
+  title: { default: brand.name + ' | ' + brand.tagline, template: '%s | ' + brand.name },
+  description: brand.heroText,
+  openGraph: { title: brand.name + ' | ' + brand.tagline, description: brand.heroText, locale: 'ko_KR', type: 'website', images: ['/images/farm.jpg'] },
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
-  return (
-    <html lang="ko">
-      <body>
-        <a className="skip-link" href="#main-content">본문 바로가기</a>
-        <Header />
-        {children}
-        <Footer />
-        <MobileBuyBar />
-      </body>
-    </html>
-  );
+export default function Layout({ children }: Readonly<{ children: React.ReactNode }>) {
+  const schema = {
+    '@context': 'https://schema.org', '@type': 'LocalBusiness', name: contact.farmName,
+    image: new URL('/images/farm.jpg', siteOrigin()).href,
+    ...(address && { address: { '@type': 'PostalAddress', streetAddress: address, addressCountry: 'KR' } }),
+    ...(phone && { telephone: phone }),
+    openingHoursSpecification: { '@type': 'OpeningHoursSpecification', dayOfWeek: 'https://schema.org/Sunday', opens: '00:00', closes: '00:00' },
+  };
+  return <html lang="ko"><body><a className="skip" href="#content">본문으로 이동</a><Header/><main id="content">{children}</main><Footer/><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema).replace(/</g, '\u005c\u003c') }}/></body></html>;
 }

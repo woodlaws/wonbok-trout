@@ -1,7 +1,14 @@
 {
-  "$schema": "https://openapi.vercel.sh/vercel.json",
   "framework": "nextjs",
-  "installCommand": "npm install",
+  "cleanUrls": true,
+  "installCommand": "npm ci",
   "buildCommand": "npm run build",
-  "outputDirectory": ".next"
+  "outputDirectory": "out",
+  "redirects": [
+    { "source": "/contact", "destination": "/visit", "permanent": true },
+    { "source": "/farm", "destination": "/story", "permanent": true },
+    { "source": "/stories", "destination": "/story", "permanent": true },
+    { "source": "/sauce", "destination": "/products/rainbow-trout-fish-sauce", "permanent": true },
+    { "source": "/trout", "destination": "/products", "permanent": true }
+  ]
 }

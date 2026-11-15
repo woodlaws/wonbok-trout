@@ -1,60 +1,38 @@
-import type { Metadata } from "next";
-import Image from "next/image";
-import { notFound } from "next/navigation";
-import { StoreCta } from "@/components/content";
-import { products } from "@/data/site";
-export function generateStaticParams(){return products.map(({slug})=>({slug}))}
-export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
-  const { slug } = await params;
-  const product = products.find((item) => item.slug === slug);
-  if (!product) return {};
+import { notFound } from 'next/navigation';
+import { Buy, HowTo, Out, Photo } from '../../sections';
+import { data, links, products, visible } from '../../site';
 
-  const detail = product.composition ?? product.sizes.join(" · ");
-  return {
-    title: product.name,
-    description: `${product.name} ${detail}. ${product.short} 먹는 방법과 구매 정보를 확인하세요.`,
-  };
+type Props = { params: Promise<{ slug: string }> };
+export const dynamicParams = false;
+
+export function generateStaticParams() {
+  return products.map(({ slug }) => ({ slug }));
 }
 
-export default async function ProductPage({ params }: { params: Promise<{ slug: string }> }) {
+async function findProduct(params: Props['params']) {
   const { slug } = await params;
-  const product = products.find((item) => item.slug === slug);
-  if (!product) notFound();
+  return products.find(item => item.slug === slug) ?? notFound();
+}
 
-  return (
-    <main id="main-content">
-      <section className="product-detail shell">
-        <div className={`product-detail-media ${!product.image ? "text-only" : ""}`}>
-          {product.image ? (
-            <>
-              <Image src={product.image} alt={product.imageAlt ?? product.name} fill priority sizes="(max-width: 720px) 100vw, 50vw" style={{ objectPosition: product.imagePosition }} />
-              {product.imageIsConcept ? <span className="hero-note">연출 시안 · 실제 제품 사진 교체 예정</span> : null}
-            </>
-          ) : (
-            <div>
-              <p className="eyebrow light">실제 제품 사진 준비 중</p>
-              <strong>{product.name}</strong>
-              <p>확정된 제품 이미지는 스마트스토어에서 확인해 주세요.</p>
-            </div>
-          )}
-        </div>
-        <div className="product-detail-copy">
-          <p className="eyebrow">{product.category}</p>
-          <h1>{product.name}</h1>
-          <p className="lead">{product.description}</p>
-          <div className="detail-summary" aria-label={`${product.name} 확인 정보`}>
-            <div><span>상품</span><strong>{product.name}</strong></div>
-            <div><span>확인된 구성</span><strong>{product.composition ?? product.sizes.join(" · ")}</strong></div>
-          </div>
-          <div className="detail-block">
-            <h2>이렇게 드세요</h2>
-            <ul>{product.usage.map((item) => <li key={item}>{item}</li>)}</ul>
-          </div>
-          <div className="notice">가격·재고·배송 조건은 변경될 수 있어 이 페이지에 고정하지 않았습니다. 구매 전 스마트스토어의 최신 정보를 확인해 주세요.</div>
-          <a className="button button-coral product-buy-button" href={product.storeUrl} target="_blank" rel="noreferrer">{product.name} 구매 정보 확인</a>
-        </div>
-      </section>
-      <StoreCta title={`${product.name}의 최신 판매 정보를 확인하세요`} href={product.storeUrl} />
-    </main>
-  );
+export async function generateMetadata({ params }: Props) {
+  const product = await findProduct(params);
+  return { title: product.name, description: product.short, openGraph: { title: product.name, description: product.short, images: ['/images/farm.jpg'] } };
+}
+
+export default async function Page({ params }: Props) {
+  const product = await findProduct(params);
+  const milestones = data.timeline.filter(visible).filter(item => ['2017', '2021', '2022'].includes(item.year));
+  return <>
+    <nav className="tabs"><div className="wrap tab-links">{products.map(item => <a key={item.slug} href={'/products/' + item.slug} className={item.slug === product.slug ? 'on' : undefined} aria-current={item.slug === product.slug ? 'page' : undefined}>{item.name}</a>)}<a href="#recipes">액젓 레시피</a></div></nav>
+    <section className="detail"><div className="wrap pd">
+      <div className="gal"><div className="main"><Photo file={product.image} alt={product.name} eager/></div><div className="thumbs">{products.filter(item => item.sizes).map(item => <a key={item.slug} href={'/products/' + item.slug} aria-current={item.slug === product.slug ? 'page' : undefined}><Photo file={item.image} alt={item.name}/></a>)}</div></div>
+      <div className="pinfo"><span className="tag s">{product.tag}</span><h1>{product.name}</h1><p className="lead">{product.short}</p>
+        {product.sizes && <ul className="opt" aria-label="용량">{[...product.sizes].reverse().map(size => <li key={size}>{size}</li>)}</ul>}
+        <dl className="facts">{product.ingredients && <><dt>원재료</dt><dd>{product.ingredients}</dd></>}{product.shelfLife && <><dt>소비기한</dt><dd>{product.shelfLife}</dd></>}<dt>가격</dt><dd>{product.priceNote}</dd></dl>
+        <div className="actions buy"><Buy product={product}/>{product.storeUrl && <Out className="btn btn-line" href={links.kakao}>카카오톡 문의 ↗</Out>}</div>
+      </div>
+    </div></section>
+    <section className="howto"><div className="wrap"><h2 className="h2">원복송어 이야기</h2><div className="points">{milestones.map((item, index) => <article className="card" key={item.year}><div className="im"><Photo file={['farm.jpg', 'products2022.jpg', 'brothers.jpg'][index]} alt={['원복송어양식장 전경', '송어 가공식품', '함준식 박사와 함영식 대표'][index]}/></div><div className="bd"><span className="eyebrow">{item.year}</span><p>{item.text}</p></div></article>)}</div></div></section>
+    <HowTo/>
+  </>;
 }

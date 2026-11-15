@@ -1,8 +1,5 @@
-import type { NextConfig } from "next";
+import type { NextConfig } from 'next';
 
-const nextConfig: NextConfig = {
-  images: { unoptimized: true },
-  trailingSlash: true,
-};
+const config: NextConfig = { output: 'export' };
 
-export default nextConfig;
+export default config;

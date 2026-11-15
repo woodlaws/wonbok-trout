@@ -8,7 +8,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "node scripts/preview.mjs"
   },
   "dependencies": {
     "lucide-react": "1.47.0",
