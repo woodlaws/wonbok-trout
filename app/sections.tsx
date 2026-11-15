@@ -151,7 +151,7 @@ export function News() {
 
 export function Visit() {
   const clientId = process.env.NAVER_MAP_CLIENT_ID?.trim();
-  const coordinates = process.env.NAVER_MAP_COORDINATES?.split(',').map(value => value.trim() ? Number(value) : NaN);
+  const coordinates = (process.env.NAVER_MAP_COORDINATES || '37.345272,128.504893').split(',').map(value => value.trim() ? Number(value) : NaN);
   const [latitude, longitude] = coordinates?.length === 2 ? coordinates : [NaN, NaN];
   const mapConfigured = clientId && Math.abs(latitude) <= 90 && Math.abs(longitude) <= 180;
   const mapLink = <Out href={links.naverMap} className="visit-map"><Photo file="farm.jpg" alt={contact.farmName + ' 전경'}/><span className="visit-map-label">네이버 지도에서 위치 보기 ↗</span></Out>;
