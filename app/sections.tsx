@@ -1,5 +1,5 @@
 import type { ReactNode } from 'react';
-import { NaverMap } from './naver-map';
+import { KakaoMap } from './kakao-map';
 import credits from '../_handoff/data/wikimedia_credits.json';
 import { address, brand, contact, data, links, navigation, phone, products, visible } from './site';
 
@@ -16,6 +16,11 @@ function Credit({ file }: { file: string }) {
   const credit = credits[creditFiles[file]];
   return credit && <span className="credit">{credit.artist} · {credit.license}</span>;
 }
+
+const latitude = 37.345267;
+const longitude = 128.504890;
+const kakaoLocation = 'https://map.kakao.com/link/map/' + encodeURIComponent(contact.farmName) + ',' + latitude + ',' + longitude;
+const kakaoDirections = 'https://map.kakao.com/link/to/' + encodeURIComponent(contact.farmName) + ',' + latitude + ',' + longitude;
 
 const socials = [
   ['스마트스토어', links.store], ['원복송어 블로그', links.blogWonbok], ['평창사랑 블로그', links.blogPyeongchangSarang],
@@ -41,7 +46,7 @@ export function Footer() {
       {data.companies.map(company => <div key={company.name}><b>{company.name}</b><p>대표 {company.ceo}{company.bizNo && <><br/>사업자등록번호 {company.bizNo}</>}{company.mailOrderNo && <><br/>통신판매업 {company.mailOrderNo}</>}{company.note && <><br/>{company.note}</>}<br/>{company.address}{company.phone && <><br/><a href={'tel:' + company.phone}>{company.phone}</a></>}</p></div>)}
       <div><b>바로가기</b><div className="sns">{socials.map(([label, href]) => <Out key={label} href={href}>{label}</Out>)}</div></div>
     </div><p className="wrap footer-credit">사진 일부 Wikimedia Commons</p></footer>
-    <nav className="mbar" aria-label="빠른 문의">{phone ? <a href={'tel:' + phone}><span aria-hidden="true">☎</span>전화</a> : <a href="/visit"><span aria-hidden="true">ⓘ</span>방문 안내</a>}<Out href={links.kakao}><span aria-hidden="true">💬</span>카톡</Out><Out className="st" href={links.store}><span aria-hidden="true">🛒</span>스토어</Out><Out href={links.naverMap}><span aria-hidden="true">📍</span>네이버 지도</Out></nav>
+    <nav className="mbar" aria-label="빠른 문의">{phone ? <a href={'tel:' + phone}><span aria-hidden="true">☎</span>전화</a> : <a href="/visit"><span aria-hidden="true">ⓘ</span>방문 안내</a>}<Out href={links.kakao}><span aria-hidden="true">💬</span>카톡</Out><Out className="st" href={links.store}><span aria-hidden="true">🛒</span>스토어</Out><Out href={kakaoDirections}><span aria-hidden="true">📍</span>카카오맵</Out></nav>
   </>;
 }
 
@@ -150,17 +155,14 @@ export function News() {
 }
 
 export function Visit() {
-  const clientId = process.env.NAVER_MAP_CLIENT_ID?.trim();
-  const coordinates = (process.env.NAVER_MAP_COORDINATES || '37.345272,128.504893').split(',').map(value => value.trim() ? Number(value) : NaN);
-  const [latitude, longitude] = coordinates?.length === 2 ? coordinates : [NaN, NaN];
-  const mapConfigured = clientId && Math.abs(latitude) <= 90 && Math.abs(longitude) <= 180;
-  const mapLink = <Out href={links.naverMap} className="visit-map"><Photo file="farm.jpg" alt={contact.farmName + ' 전경'}/><span className="visit-map-label">네이버 지도에서 위치 보기 ↗</span></Out>;
+  const appKey = process.env.KAKAO_MAP_JS_KEY?.trim();
+  const mapLink = <Out href={kakaoLocation} className="visit-map"><Photo file="farm.jpg" alt={contact.farmName + ' 전경'}/><span className="visit-map-label">카카오맵에서 위치 보기 ↗</span></Out>;
   return <section className="visit"><div className="wrap grid">
-    {mapConfigured ? <NaverMap clientId={clientId} latitude={latitude} longitude={longitude} name={contact.farmName}>{mapLink}</NaverMap> : mapLink}
+    {appKey ? <KakaoMap appKey={appKey} latitude={latitude} longitude={longitude} name={contact.farmName}>{mapLink}</KakaoMap> : mapLink}
     <div className="info"><p className="eyebrow">오시는 길</p><h2 className="h2">{contact.farmName}</h2>
       <dl>{address && <><dt>주소</dt><dd>{address}</dd></>}{phone && <><dt>전화</dt><dd><a href={'tel:' + phone}>{phone}</a></dd></>}
         <dt>휴무</dt><dd>{contact.closed}</dd><dt>편의</dt><dd>{contact.amenities}</dd>{visible(contact.direction) && <><dt>가는 길</dt><dd>{contact.direction.text}</dd></>}
-      </dl><div className="row"><Out href={links.naverMap} className="btn btn-ink">네이버 지도 길찾기 ↗</Out><Out href={links.kakao} className="btn btn-line">카카오톡 문의 ↗</Out></div>
+      </dl><div className="row"><Out href={kakaoDirections} className="btn btn-ink">카카오맵 길찾기 ↗</Out><Out href={links.kakao} className="btn btn-line">카카오톡 문의 ↗</Out></div>
     </div>
   </div></section>;
 }
