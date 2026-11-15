@@ -46,7 +46,7 @@ export function Footer() {
       {data.companies.map(company => <div key={company.name}><b>{company.name}</b><p>대표 {company.ceo}{company.bizNo && <><br/>사업자등록번호 {company.bizNo}</>}{company.mailOrderNo && <><br/>통신판매업 {company.mailOrderNo}</>}{company.note && <><br/>{company.note}</>}<br/>{company.address}{company.phone && <><br/><a href={'tel:' + company.phone}>{company.phone}</a></>}</p></div>)}
       <div><b>바로가기</b><div className="sns">{socials.map(([label, href]) => <Out key={label} href={href}>{label}</Out>)}</div></div>
     </div><p className="wrap footer-credit">사진 일부 Wikimedia Commons</p></footer>
-    <nav className="mbar" aria-label="빠른 문의">{phone ? <a href={'tel:' + phone}><span aria-hidden="true">☎</span>전화</a> : <a href="/visit"><span aria-hidden="true">ⓘ</span>방문 안내</a>}<Out href={links.kakao}><span aria-hidden="true">💬</span>카톡</Out><Out className="st" href={links.store}><span aria-hidden="true">🛒</span>스토어</Out><Out href={kakaoDirections}><span aria-hidden="true">📍</span>카카오맵</Out></nav>
+    <nav className="mbar" aria-label="빠른 문의">{phone ? <a href={'tel:' + phone}><span aria-hidden="true">☎</span>전화</a> : <a href="/visit"><span aria-hidden="true">ⓘ</span>방문 안내</a>}<Out href={links.kakao}><span aria-hidden="true">💬</span>카톡</Out><Out className="st" href={links.store}><span aria-hidden="true">🛒</span>스토어</Out><a className="exp-mobile-reserve" href="#group"><span aria-hidden="true">📅</span>예약문의</a><Out href={kakaoDirections}><span aria-hidden="true">📍</span>카카오맵</Out></nav>
   </>;
 }
 
@@ -59,13 +59,12 @@ export function Subhero({ title, file, text }: { title: string; file: string; te
 }
 
 export function Story({ full = false }: { full?: boolean }) {
-  const timeline = data.timeline.filter(visible);
-  const entries = full ? timeline : timeline.filter(item => ['1965', '1976', '1990', '2017', '2021'].includes(item.year)).filter((item, index, list) => index === 0 || item.year !== list[index - 1].year);
+  const entries = (full ? data.timeline : data.home.timeline).filter(visible);
   return <section><div className="wrap story">
-    <div><div className="ph"><Photo file="brothers.jpg" alt="함준식 박사와 함영식 대표"/></div><p className="cap">함준식 박사 · 함영식 대표</p></div>
-    <div><p className="eyebrow">원복송어 이야기</p><h2 className="h2">{brand.tagline}</h2><p className="lead">{brand.heroText}</p>
+    <div><div className="ph story-portraits"><Photo file="story/dr-ham-research.jpg" alt="함준식 박사"/><Photo file="story/ys-symposium.jpg" alt="함영식 대표"/></div><p className="cap">{data.home.storyCaption}</p></div>
+    <div><p className="eyebrow">원복송어 이야기</p><h2 className="h2">{full ? brand.tagline : <>{data.home.storyTitle[0]}<br/>{data.home.storyTitle[1]}</>}</h2><p className="lead">{full ? brand.heroText : data.home.storyLead}</p>
       <ul className="timeline">{entries.map(item => <li key={item.text}><b>{item.year}</b>{item.text}</li>)}</ul>
-      {!full && <a className="btn btn-line after-list" href="/story">이야기 전체 보기 →</a>}
+      {!full && <a className="btn btn-line after-list" href="/story">61년 이야기 전체 보기 →</a>}
     </div>
   </div></section>;
 }
@@ -76,7 +75,7 @@ export function Buy({ product }: { product: typeof products[number] }) {
 
 export function ProductList({ home = false }: { home?: boolean }) {
   return <section className={home ? 'product-home' : undefined}><div className="wrap">
-    <Title title="송어 · 액젓" action={<Out href={links.store} className="btn btn-ink">스마트스토어 전체 상품 ↗</Out>}/>
+    <Title title="송어 · 액젓" action={home ? <a href="/products" className="btn btn-ink">송어·액젓 전체 보기 →</a> : <Out href={links.store} className="btn btn-ink">스마트스토어 전체 상품 ↗</Out>}/>
     <div className="prods">{products.filter(product => !home || product.featured).map((product, index) => <article className="card" key={product.slug}>
       <a className="im" href={'/products/' + product.slug}><Photo file={product.image} alt={product.name}/></a>
       <div className="bd"><span className={'tag ' + (index === 0 ? 's' : 'g')}>{product.tag}</span>
@@ -93,11 +92,11 @@ export function HowTo() {
   </div><div className="pics"><Photo file="cabbage.jpg" alt="평창 고랭지 배추"/><Photo file="sashimi_aek.jpg" alt="송어회와 송어액젓"/></div></div></section>;
 }
 
-export function Wholesale() {
-  return <section className="b2b"><div className="grid"><div className="im"><Photo file="sorting.jpg" alt="양식장 송어 선별 작업"/></div><div className="tx">
+export function Wholesale({ home = false }: { home?: boolean }) {
+  return <section className="b2b"><div className="grid"><div className="im"><Photo file="story/sorting-2026.jpg" alt="양식장 송어 선별 작업"/><span className="badge-photo">{data.home.wholesaleCaption}</span></div><div className="tx">
     <p className="eyebrow">식당 · 납품</p><h2 className="h2">{data.wholesale.title}</h2>
     <ul>{data.wholesale.points.map(point => <li key={point}>{point}</li>)}</ul>
-    <div className="actions"><a href="/wholesale#inquiry" className="btn btn-salmon">납품 상담 →</a>{phone && <a className="btn btn-ghost" href={'tel:' + phone}>{phone}</a>}</div>
+    <div className="actions"><a href="/wholesale#form" className="btn btn-salmon">{home ? "식당·납품 자세히 보기 →" : "납품 상담 →"}</a>{phone && <a className="btn btn-ghost" href={'tel:' + phone}>{phone}</a>}</div>
   </div></div></section>;
 }
 
@@ -146,20 +145,20 @@ export function Press() {
   })}</div>;
 }
 
-export function News() {
+export function News({ home = false }: { home?: boolean }) {
   return <section><div className="wrap">
-    <Title label="소식" title="양식장과 평창의 오늘" action={<div className="actions">{socials.slice(2, 5).map(([label, href]) => <Out key={label} href={href} className="btn btn-line">{label}</Out>)}</div>}/>
+    <Title label="소식" title="양식장과 평창의 오늘" action={home ? <a href="/news" className="btn btn-line">소식 전체 보기 →</a> : <div className="actions">{socials.slice(2, 5).map(([label, href]) => <Out key={label} href={href} className="btn btn-line">{label}</Out>)}</div>}/>
     <div className="feed">{data.news.map(item => <Out key={item.title} href={item.url} className="post"><div className="im"><Photo file={item.image} alt={item.title}/><span className="src">{item.source}</span></div><div className="bd"><b>{item.title}</b><span>{item.date}</span></div></Out>)}</div>
     <Press/>
   </div></section>;
 }
 
-export function Visit() {
+export function Visit({ home = false }: { home?: boolean }) {
   const appKey = process.env.KAKAO_MAP_JAVASCRIPT_KEY?.trim() || process.env.KAKAO_MAP_JS_KEY?.trim();
-  const mapLink = <Out href={kakaoLocation} className="visit-map"><Photo file="farm.jpg" alt={contact.farmName + ' 전경'}/><span className="visit-map-label">카카오맵에서 위치 보기 ↗</span></Out>;
+  const mapLink = <Out href={kakaoLocation} className="visit-map"><Photo file="story/winter-steam-farm.jpg" alt={contact.farmName + ' 전경'}/><span className="visit-map-label">카카오맵에서 위치 보기 ↗</span></Out>;
   return <section className="visit"><div className="wrap grid">
     {appKey ? <KakaoMap appKey={appKey} latitude={latitude} longitude={longitude} name={contact.farmName}>{mapLink}</KakaoMap> : mapLink}
-    <div className="info"><p className="eyebrow">오시는 길</p><h2 className="h2">{contact.farmName}</h2>
+    <div className="info"><div className="visit-heading"><p className="eyebrow">오시는 길</p>{home && <a href="/visit">자세히 보기 →</a>}</div><h2 className="h2">{contact.farmName}</h2>
       <dl>{address && <><dt>주소</dt><dd>{address}</dd></>}{phone && <><dt>전화</dt><dd><a href={'tel:' + phone}>{phone}</a></dd></>}
         <dt>휴무</dt><dd>{contact.closed}</dd><dt>편의</dt><dd>{contact.amenities}</dd>{visible(contact.direction) && <><dt>가는 길</dt><dd>{contact.direction.text}</dd></>}
       </dl><div className="row"><Out href={kakaoDirections} className="btn btn-ink">카카오맵 길찾기 ↗</Out><Out href={links.kakao} className="btn btn-line">카카오톡 문의 ↗</Out></div>

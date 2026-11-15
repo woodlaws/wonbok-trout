@@ -1,38 +1,34 @@
 import { notFound } from 'next/navigation';
-import { Buy, HowTo, Out, Photo } from '../../sections';
-import { data, links, products, visible } from '../../site';
+import catalog from '../../../content/products.json';
+import { Block, Faq, Grid, JsonLd, LinkButton, Steps, Tile } from '../../detail-ui';
+import { onSale, PriceOptions, ProductCard, productPhoto, Recipes } from '../../product-content';
+import { ProductGallery } from '../../product-gallery';
 
-type Props = { params: Promise<{ slug: string }> };
+type Props = { params: Promise<{slug:string}> };
 export const dynamicParams = false;
+export function generateStaticParams(){return onSale.map(({slug})=>({slug}));}
 
-export function generateStaticParams() {
-  return products.map(({ slug }) => ({ slug }));
+async function find(params:Props['params']){
+  const {slug}=await params;
+  return onSale.find(item=>item.slug===slug)??notFound();
 }
-
-async function findProduct(params: Props['params']) {
-  const { slug } = await params;
-  return products.find(item => item.slug === slug) ?? notFound();
+export async function generateMetadata({params}:Props){
+  const item=await find(params);
+  return {title:item.name,description:item.lead,openGraph:{title:item.name,description:item.lead,images:[{url:'/images/'+productPhoto(item.images![0])}]}};
 }
-
-export async function generateMetadata({ params }: Props) {
-  const product = await findProduct(params);
-  return { title: product.name, description: product.short, openGraph: { title: product.name, description: product.short, images: ['/images/farm.jpg'] } };
-}
-
-export default async function Page({ params }: Props) {
-  const product = await findProduct(params);
-  const milestones = data.timeline.filter(visible).filter(item => ['2017', '2021', '2022'].includes(item.year));
+export default async function Page({params}:Props){
+  const item=await find(params);
+  const photos=item.images!.map(productPhoto);
   return <>
-    <nav className="tabs"><div className="wrap tab-links">{products.map(item => <a key={item.slug} href={'/products/' + item.slug} className={item.slug === product.slug ? 'on' : undefined} aria-current={item.slug === product.slug ? 'page' : undefined}>{item.name}</a>)}<a href="#recipes">액젓 레시피</a></div></nav>
-    <section className="detail"><div className="wrap pd">
-      <div className="gal"><div className="main"><Photo file={product.image} alt={product.name} eager/></div><div className="thumbs">{products.filter(item => item.sizes).map(item => <a key={item.slug} href={'/products/' + item.slug} aria-current={item.slug === product.slug ? 'page' : undefined}><Photo file={item.image} alt={item.name}/></a>)}</div></div>
-      <div className="pinfo"><span className="tag s">{product.tag}</span><h1>{product.name}</h1><p className="lead">{product.short}</p>
-        {product.sizes && <ul className="opt" aria-label="용량">{[...product.sizes].reverse().map(size => <li key={size}>{size}</li>)}</ul>}
-        <dl className="facts">{product.ingredients && <><dt>원재료</dt><dd>{product.ingredients}</dd></>}{product.shelfLife && <><dt>소비기한</dt><dd>{product.shelfLife}</dd></>}<dt>가격</dt><dd>{product.priceNote}</dd></dl>
-        <div className="actions buy"><Buy product={product}/>{product.storeUrl && <Out className="btn btn-line" href={links.kakao}>카카오톡 문의 ↗</Out>}</div>
-      </div>
-    </div></section>
-    <section className="howto"><div className="wrap"><h2 className="h2">원복송어 이야기</h2><div className="points">{milestones.map((item, index) => <article className="card" key={item.year}><div className="im"><Photo file={['farm.jpg', 'products2022.jpg', 'brothers.jpg'][index]} alt={['원복송어양식장 전경', '송어 가공식품', '함준식 박사와 함영식 대표'][index]}/></div><div className="bd"><span className="eyebrow">{item.year}</span><p>{item.text}</p></div></article>)}</div></div></section>
-    <HowTo/>
+    <JsonLd value={{'@context':'https://schema.org','@type':'Product',name:item.name,description:item.lead,image:photos.map(file=>'/images/'+file),offers:item.options!.map(option=>({'@type':'Offer',name:option.size,price:option.price,priceCurrency:'KRW',url:item.storeUrl,availability:'https://schema.org/InStock'})),aggregateRating:{'@type':'AggregateRating',ratingValue:item.review!.rating,reviewCount:item.review!.count}}}/>
+    <Block><div className="detail-split product-detail"><ProductGallery images={photos} name={item.name}/><div className="detail-copy">
+      <p className="eyebrow">{item.badge} · ★ {item.review!.rating} · 리뷰 {item.review!.count}개</p><h1 className="h2">{item.name}</h1><p>{item.lead}</p>
+      <PriceOptions options={item.options}/><dl className="facts">{item.spec?.map(spec=><div className="fact-row" key={spec.k}><dt>{spec.k}</dt><dd>{spec.v}</dd></div>)}</dl>
+      <div className="actions"><LinkButton href={item.storeUrl!} className="btn btn-salmon">스마트스토어 구매 ↗</LinkButton><LinkButton href="kakao">카카오톡 문의 ↗</LinkButton></div><p className="detail-note">{catalog.basisDate} 스토어 기준</p>
+    </div></div></Block>
+    <Block title="61년 양식장이 송어부터 직접" tone="cream"><Grid cols={4}>{catalog.why.map(card=><Tile key={card.t} title={card.t} text={card.p} image={productPhoto(card.image)} label={card.n}/>)}</Grid></Block>
+    <Block title="송어 한 마리가 액젓이 되기까지"><Steps items={catalog.process}/></Block>
+    <Recipes chaga={item.slug.startsWith('chaga')}/><Faq title="액젓·송어 FAQ" items={catalog.faq}/>
+    <Block title="다른 액젓도 만나보세요" tone="mint"><Grid cols={2}>{onSale.filter(product=>product.slug!==item.slug).map(product=><ProductCard key={product.slug} product={product}/>)}<Tile title="식당·납품"><LinkButton href="/wholesale#form">업소용 대용량 상담 →</LinkButton></Tile></Grid></Block>
   </>;
 }

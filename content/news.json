@@ -1,0 +1,520 @@
+{
+  "meta": {
+    "title": "소식 | 원복송어 · 평창사랑 일기",
+    "description": "평창 미탄 원복송어양식장 함영식 대표가 직접 쓰는 양식장의 하루, 송어 역사, 송어액젓, 평창 이야기와 방송·언론 기록."
+  },
+  "hero": {
+    "eyebrow": "평창사랑 일기",
+    "title": "양식장과 평창의 오늘, 함영식 대표가 직접 씁니다",
+    "highlight": "함영식 대표",
+    "lead": "송어를 키우는 하루, 액젓을 담그는 계절, 평창 마을 사람들 이야기. AI가 아닌 대표님 손으로 쓴 기록을 모았습니다.",
+    "stats": [
+      {
+        "big": "713편",
+        "label": "블로그에 쌓인 기록",
+        "asOf": "2026-11-15"
+      }
+    ]
+  },
+  "channels": [
+    {
+      "key": "blog",
+      "label": "원복송어 블로그",
+      "url": "https://blog.naver.com/papatrout",
+      "rss": "https://rss.blog.naver.com/papatrout.xml"
+    },
+    {
+      "key": "instagram",
+      "label": "인스타그램",
+      "handle": "@pyeongchang_love",
+      "url": "https://www.instagram.com/pyeongchang_love/"
+    },
+    {
+      "key": "threads",
+      "label": "스레드",
+      "handle": "@pyeongchang_love",
+      "url": "https://www.threads.com/@pyeongchang_love"
+    },
+    {
+      "key": "psarang",
+      "label": "평창사랑 블로그",
+      "url": "https://blog.naver.com/durepcsarang",
+      "rss": "https://rss.blog.naver.com/durepcsarang.xml"
+    }
+  ],
+  "notices": [
+    {
+      "icon": "🥬",
+      "text": "김장철 송어액젓 주문 받습니다",
+      "sub": "스마트스토어",
+      "href": "store"
+    },
+    {
+      "icon": "📅",
+      "text": "매주 일요일 휴무"
+    }
+  ],
+  "tabs": [
+    {
+      "key": "all",
+      "label": "전체"
+    },
+    {
+      "key": "farm",
+      "label": "양식장의 하루"
+    },
+    {
+      "key": "history",
+      "label": "송어 역사"
+    },
+    {
+      "key": "product",
+      "label": "액젓·제품"
+    },
+    {
+      "key": "psarang",
+      "label": "평창사랑"
+    },
+    {
+      "key": "event",
+      "label": "행사·교육"
+    },
+    {
+      "key": "travel",
+      "label": "평창 여행"
+    }
+  ],
+  "categoryMap": {
+    "송어양식장의하루": "farm",
+    "평창 원복송어 역사": "history",
+    "평창송어양식과 제품": "product",
+    "평창농수산물": "product",
+    "평창사랑(농)": "psarang",
+    "지역행사": "event",
+    "교육": "event",
+    "강원도여행": "travel",
+    "블로그 30일": "etc",
+    "소소한일상": "etc",
+    "친구들과 한컷": "etc",
+    "[블챌] 왓츠인마이블로그": "etc",
+    "평창송어축제": "event"
+  },
+  "excludeCategories": [],
+  "fallbackPosts": [
+    {
+      "title": "평창관광아카데미 특강 후기｜공주 '마을스테이'에서 배운 체류형 관광, 평창은 무엇을 이어야 할까",
+      "url": "https://blog.naver.com/papatrout/224472825604",
+      "date": "2026-11-11",
+      "category": "교육",
+      "tab": "event",
+      "summary": "목차 평창관광아카데미, 공주에서 온 특강 2.체류형 관광이란 무엇인가 – 점·선·면 3.공주 마을스테이 프로그램, 무엇이 달랐나 4.평창관광아카데미가 던진 질문, 평창의 답은? 5. 마무리 – 이제",
+      "thumbRemote": "https://blogthumb.pstatic.net/MjAyNjExMTFfMjky/MDAxNzk0MzY0OTc2NTc5.y7wZhAY0OpU8svD0m549Y9qOYqTI2jEpWsmJZnAZb7Ug.x-KNPmZpx3vTYEvHmNuMq0Cyr2Ve_69G21dWOwbIoecg.JPEG/900%A3%DF20261104%A3%DF145551.jpg?type=w2",
+      "thumbLocal": "news/blog_00.jpg"
+    },
+    {
+      "title": "평창 봉평 옛골 방문, 메밀 한 그릇과 배움으로 이어진 인연",
+      "url": "https://blog.naver.com/papatrout/224462296885",
+      "date": "2026-11-02",
+      "category": "강원도여행",
+      "tab": "travel",
+      "summary": "평창 봉평 옛골 방문, 메밀 한 그릇과 배움으로 이어진 인연 평창군 봉평면에 있는 메밀음식점 ‘옛골’(대표 : 김윤희)을 방문했습니다. 이번 방문이 더욱 반가웠던 것은 이 댁의 주인이신 김윤희께서 ",
+      "thumbRemote": "https://blogthumb.pstatic.net/MjAyNjExMDJfMTQ3/MDAxNzkzNTk2NzkwMTg2.UlYhkQZh1f1t0qA4tQAAhKf3N9Rj3OcCGov5t1DI_34g.9u9kN-Pm5UxuZkCQUxpz8XFSYnbxgUnWzZ0kCsQgml0g.JPEG/900%A3%DF20261101%A3%DF132303.jpg?type=w2",
+      "thumbLocal": "news/blog_01.jpg"
+    },
+    {
+      "title": "제목: 평창관광문화재단 관광아카데미 2주 차｜지역 자원으로 새로운 관광상품 만들기",
+      "url": "https://blog.naver.com/papatrout/224445691614",
+      "date": "2026-10-18",
+      "category": "블로그 30일",
+      "tab": "etc",
+      "summary": "평창군립 진부도서관에서 평창관광문화재단(이사장 : 심재국 군수)이 주관하는 관광아카데미 2주 차 교육이 열렸습니다. 이번 교육은 평창의 관광자원을 새롭게 바라보고, 관광객과 지속적인 관계를 만드는 ",
+      "thumbRemote": "https://blogthumb.pstatic.net/MjAyNjEwMThfMjgx/MDAxNzkyMzA0ODg5NTk3._fWiXfpAN5V0bG4bZ8V20Ne1bjYD9yMOATzu7nbjml0g.-uIjq_zuUHMTrv4UMibyDS_LwIdXtqM-GuVnr3UBHHIg.JPEG/900%A3%DF20261014%A3%DF152705.jpg?type=w2",
+      "thumbLocal": "news/blog_02.jpg"
+    },
+    {
+      "title": "송어 키우는 사람이 관광 수업에 간 이유 – \"팔 것이 없다\"는 착각이 깨진 날",
+      "url": "https://blog.naver.com/papatrout/224438670490",
+      "date": "2026-10-12",
+      "category": "교육",
+      "tab": "event",
+      "summary": "지난 10 월7일 수요일, 진부도서관 2층 강당에 다녀왔습니다. 평창관광문화재단이 마련한 「2026 평창관광 비즈니스 아카데미」 첫 수업이었어요. 관광·문화·축제 현장에서 일하는 사람들을 위한 교육",
+      "thumbRemote": "https://blogthumb.pstatic.net/MjAyNjEwMTJfNjYg/MDAxNzkxNzYzMjczMDQ3.Dat2yzXAb12PRuRxuxdKCitAjZrWtsqEq3f0yVeLwEog.ywyCVK-ydF0CBqd7oGhZQE-lnYxxFPpigu3YQD62whMg.JPEG/900%A3%DF20261007%A3%DF141156.jpg?type=w2",
+      "thumbLocal": null
+    },
+    {
+      "title": "「평창관광협의회 선진지 견학｜인제 하추리마을·양양 해담마을·강릉 커피거리에서 배운 체험관광」",
+      "url": "https://blog.naver.com/papatrout/224432635403",
+      "date": "2026-10-06",
+      "category": "강원도여행",
+      "tab": "travel",
+      "summary": "지난 9월 30일부터 10월 1일까지 1박 2일 일정으로 평창관광협의회(회장 : 김영해) 회원들이 선진지 견학을 다녀왔습니다. 이번 견학지는 강원도 인제군의 하추리 마을. 양양군의 해담 마을과 강릉",
+      "thumbRemote": "https://blogthumb.pstatic.net/MjAyNjEwMDZfMTg3/MDAxNzkxMjM4NjU0Mzc0.FKaietKF0_AhI1vkFAFcM6soBv68fam4HJiLNoqDLlYg.74wlHEL69RZ_qU0ap7YKgbxCle9PveVX1-WAEYMSxKgg.JPEG/20260930_142733.jpg?type=w2",
+      "thumbLocal": "news/blog_04.jpg"
+    },
+    {
+      "title": "숨은 대박 요리! 무지개송어액젓만으로 만드는 3가지 요리",
+      "url": "https://blog.naver.com/papatrout/224421842565",
+      "date": "2026-09-24",
+      "category": "평창송어양식과 제품",
+      "tab": "product",
+      "summary": "혹시 '액젓'이 김장 양념이나 국물 요리에만 쓰인다고 생각하세요? 그렇다면 큰 오산입니다! 원복송어양식장의 무지개송어액젓은 단 하나의 양념만으로도 전문가 수준의 맛을 완성하는 마법의 재료입니다. 오",
+      "thumbRemote": "https://blogthumb.pstatic.net/MjAyNjA5MjRfMTQz/MDAxNzkwMjAwOTk1Mzc2.sgACL9Xk-X95PlkuiIVpY1AJiCvswAMgTsfyCoH9grsg.bs6-kyht4RDtz_E7MT3djfgej9RGmmxNDatGHDMhCZUg.PNG/ChatGPT_Image_2026%B3%E2_9%BF%F9_24%C0%CF_%BF%C0%C0%FC_07_02_47.png?type=w2",
+      "thumbLocal": null,
+      "aiImageSuspect": true
+    },
+    {
+      "title": "평창무지개송어액젓 사용법, 김치부터 국수까지 집밥이 맛있어지는 작은 변화",
+      "url": "https://blog.naver.com/papatrout/224419049155",
+      "date": "2026-09-21",
+      "category": "평창송어양식과 제품",
+      "tab": "product",
+      "summary": "안녕하세요. 강원도 평창군 미탄면 송어길 56, 원복송어양식장에서 무지개송어를 키우고 액젓을 생산 판매하는 함영식입니다. 선선한 바람이 불면 따뜻한 국 한 그릇과 갓 무친 겉절이가 생각납니다. 거창",
+      "thumbRemote": "https://blogthumb.pstatic.net/MjAyNjA5MjFfMTc3/MDAxNzg5OTg2MzU5NTI4.KskuQNTiviTTZrwVeGpg9UM-b9jX_r36aw1MIQ-zCv8g.3xPF4dpuDfArbccPZPR6nr79EtYoHyjpSYEgOje3YfUg.PNG/exec-139f94c5-7896-418a-9baa-0d877bba4482.png?type=w2",
+      "thumbLocal": null,
+      "aiImageSuspect": true
+    },
+    {
+      "title": "그린바이오란? 제1회 평창 그린바이오인의 밤에서 들은 평창의 미래",
+      "url": "https://blog.naver.com/papatrout/224417707234",
+      "date": "2026-09-20",
+      "category": "송어양식장의하루",
+      "tab": "farm",
+      "summary": "안녕하세요. 평창 미탄면에서 송어를 기르는 함영식입니다. 9월 17일부터 18일까지 휘닉스파크 평창 포ㅁ레스트홀과 서울대학교 평창캠퍼스에서 열린 ‘제1회 평창 그린바이오인의 밤’에 다녀왔습니다. 행",
+      "thumbRemote": "https://blogthumb.pstatic.net/MjAyNjA5MjBfMTM1/MDAxNzg5ODcyOTEzMzE1.y6sa4gmUIQObXNZbpP4-DZF9BUp9wGU_XtwPCaJeUqEg.-0IZVQAvbkzNcZPaJoB6bw2mGKsc52K8MK7arR8q9AMg.JPEG/900%A3%DF20260917%A3%DF131331.jpg?type=w2",
+      "thumbLocal": "news/blog_07.jpg"
+    },
+    {
+      "title": "61년 송어의 역사, 마침내 문화가 되다 ― 낭독극 「평창송어별곡」",
+      "url": "https://blog.naver.com/papatrout/224416338598",
+      "date": "2026-09-18",
+      "category": "블로그 30일",
+      "tab": "etc",
+      "summary": "1965년 1월 3일, 미국 캘리포니아에서 무지개송어 알 1만 개가 대한민국 화천군 파라호 상류에 처음 도착하였다. 그 작은 알들이 다 죽고 평창으로 이사와서 다음 해 부화해 살아남아, 평창의 차고",
+      "thumbRemote": "https://blogthumb.pstatic.net/MjAyNjA5MThfMTU0/MDAxNzg5NzA2NTg0Mzgz.YhUloxI-xN9xZyiRHxdBTmonHkxpPQGHR5EZYoes95Yg.fRtJ8AYeSxbhwcJh0pJhRn0m9xIzXaZF0-YXOUECDT8g.JPEG/900%A3%DF1789699639072.jpg?type=w2",
+      "thumbLocal": "news/blog_08.jpg"
+    },
+    {
+      "title": "1965년 송어 알에서 AI 양식까지｜내수면 양식 미래전략 심포지엄과 현장의 건의",
+      "url": "https://blog.naver.com/papatrout/224409480429",
+      "date": "2026-09-12",
+      "category": "평창 원복송어 역사",
+      "tab": "history",
+      "summary": "1965년 우리나라에 무지개송어가 처음 들어온 뒤 61년이 흐르고 있다. 국립수산과학원 자료에 따르면 무지개송어는 1965년 1월 3일 미국 캘리포니아주(州)에서 처음 도입된 뒤 우리나라의 중요한 ",
+      "thumbRemote": "https://blogthumb.pstatic.net/MjAyNjA5MTJfMTE0/MDAxNzg5MTcyNDg2NDc4.IJYkXJgOFMnuVAj6jhPCbkZlk3r3aK0YOWKse0HLeaEg.KvnQkAcR6JTGubPpyRDh1GCSn_OiNshoWrFXRGTKzUAg.JPEG/900%A3%DF20260910%A3%DF152339.jpg?type=w2",
+      "thumbLocal": "news/blog_09.jpg"
+    },
+    {
+      "title": "미국에서 온 가족과 함께한 뿌리 찾기, 조상을 찾아 떠난 뜻깊은 하루",
+      "url": "https://blog.naver.com/papatrout/224389176712",
+      "date": "2026-08-24",
+      "category": "평창 원복송어 역사",
+      "tab": "history",
+      "summary": "오랫동안 기다렸던 반가운 사촌 형님과 딸의 가족들이 미국에서 한국을 찾았습니다. 멀리 떨어져 살아 자주 만나기 어려웠던 만큼 이번 만남은 단순한 가족 여행이 아니라, 아이들에게 자신의 뿌리와 조상의",
+      "thumbRemote": "https://blogthumb.pstatic.net/MjAyNjA4MjVfMzQg/MDAxNzg3NTkyNjc5MTUy.t2uFZCLJZar9WQyt_ItZv64FCCrPE6u13Dv3iKU0vGcg.TESrqPdImxU9js2VEFlqLylcy8pw7N3eV9gzvCQg7mQg.JPEG/900%A3%DF20260823%A3%DF115158.jpg?type=w2",
+      "thumbLocal": "news/blog_10.jpg"
+    },
+    {
+      "title": "평창 미탄의 농부 이야기, 청옥산 아래 임해극 이장의 대추방울토마토",
+      "url": "https://blog.naver.com/papatrout/224384815064",
+      "date": "2026-08-20",
+      "category": "소소한일상",
+      "tab": "etc",
+      "summary": "평창에는 이름난 관광지도 많지만, 산골 마을 곳곳을 찾아가 보면 그곳에서 묵묵히 농사를 지으며 평창의 맛을 만들어가는 농부들을 만날 수 있습니다. 오늘 소개할 곳은 평창군 미탄면 청옥산 육백마지기 ",
+      "thumbRemote": "https://blogthumb.pstatic.net/MjAyNjA4MjBfMjc4/MDAxNzg3MjA5NTA3NDM0.iIa4h8Sledo4cNF9mBiSlKGcbF1kh4Jw3I-HI1QdJmUg.IaqacYSpt_D1LvHF0qziwM0RUqtEAPkGKmu_MVSoX2Ig.JPEG/900%A3%DF20260817%A3%DF080452.jpg?type=w2",
+      "thumbLocal": "news/blog_11.jpg"
+    },
+    {
+      "title": "61년 송어 장인의 도전, 평창무지개송어액젓이 만들어지는 곳",
+      "url": "https://blog.naver.com/papatrout/224380634384",
+      "date": "2026-08-16",
+      "category": "평창송어양식과 제품",
+      "tab": "product",
+      "summary": "혹시 대한민국 송어 양식의 역사가 어디에서 시작되었는지 아시나요? 우리나라 무지개송어 양식은 1965년 1월 3일 화천에서 처음 시도된 뒤, 같은 해 10월 평창으로 시설을 옮기면서 본격적인 역사를",
+      "thumbRemote": "https://blogthumb.pstatic.net/MjAyNjA4MTZfMTkx/MDAxNzg2ODg3Njk4NTg2.66bIDffqiwhubFy4jrWj4TtQ9J4W2wTIKf4TqPy_6UEg.K5aj2vVpd2dfMH_JEbgHAEw6D5kAZ0gCgkxoxViJnhUg.PNG/ChatGPT_Image_2026%B3%E2_8%BF%F9_16%C0%CF_%BF%C0%C8%C4_10_40_42.png?type=w2",
+      "thumbLocal": null
+    },
+    {
+      "title": "60년 전통이 밥상 위로, 평창 원복송어양식장과 솔대와 하늘",
+      "url": "https://blog.naver.com/papatrout/224379232338",
+      "date": "2026-08-14",
+      "category": "블로그 30일",
+      "tab": "etc",
+      "summary": "계방산 하산길에서 만난 붉은 보석, 송어회 한 접시 강원도 평창군 용평면, 해발 1,577m 계방산 아래 자락. 겨울이면 눈 덮인 능선이 병풍처럼 둘러서고, 여름이면 계곡물소리가 마을 전체를 감싸는",
+      "thumbRemote": "https://blogthumb.pstatic.net/MjAyNjA4MTVfMTIz/MDAxNzg2NzQ4Mzg3NTY3.ERkHFgU0U7KtQMgvju5JdjnhnBV9Eci-qQTsQYT7fHsg.vaOSv2MhbgBFCv6n1ItRyfBDL7XP055eooBcxqnrauMg.PNG/ChatGPT_Image_2026%B3%E2_8%BF%F9_15%C0%CF_%BF%C0%C0%FC_07_56_50_%281%29.png?type=w2",
+      "thumbLocal": null
+    },
+    {
+      "title": "평창 가볼만한곳, 천지애농원에서 진행한 여름 로컬 체험 행사 기록",
+      "url": "https://blog.naver.com/papatrout/224379132443",
+      "date": "2026-08-14",
+      "category": "평창사랑(농)",
+      "tab": "psarang",
+      "summary": "평창사랑주식회사농업법인(대표 함영식)입니다. 어제 8월 14일, 저희 법인이 운영하천지애농원’(대표 :박용범)에서 한국관광공사의 지원을 받아 지역 로컬 체험 행사를 진행했습니다. 푸른 산과 싱그러운",
+      "thumbRemote": "https://blogthumb.pstatic.net/MjAyNjA4MTVfMjE3/MDAxNzg2NzMxNzIyMTI5.JCwH0i1AbLSrZxTnCX_s6IrnzBAVkBRsyb4zEfiYguQg.NIAUlh5UXEDOUnGdU8TkYI6VV_J8eWu6r1C6ZOG-lPEg.JPEG/KakaoTalk_20260814_162443998_02.jpg?type=w2",
+      "thumbLocal": null
+    },
+    {
+      "title": "계방산 산행 후 만난 쫀득한 송어회, 평창 솔대와 하늘",
+      "url": "https://blog.naver.com/papatrout/224376734615",
+      "date": "2026-08-12",
+      "category": "블로그 30일",
+      "tab": "etc",
+      "summary": "여행에서 식당 하나를 고르는 일이 생각보다 쉽지 않다. 음식이 맛있어도 동선에서 멀리 벗어나면 부담스럽고, 위치가 좋아도 메뉴가 평범하면 아쉬움이 남는다. 특히 산행을 마친 뒤에는 더 그렇다. 지친",
+      "thumbRemote": "https://blogthumb.pstatic.net/MjAyNjA4MTJfMTQg/MDAxNzg2NTM3NTkzMTQz.oraIOaYqeYNr85Vlo0QcrXpSzJTp8ru2L7WBVT28abwg.ZnmGRoUfPF2AIIpmWSr-jRPeCw0Axnyyx-f5be1XFQog.PNG/%BC%DB%BE%EE%C7%CA%B7%BF%BD%E6%B3%D7%C0%CF1.png?type=w2",
+      "thumbLocal": null
+    },
+    {
+      "title": "양평 용문 송어회 맛집, 평창송어회 다녀온 이야기",
+      "url": "https://blog.naver.com/papatrout/224374779291",
+      "date": "2026-08-10",
+      "category": "블로그 30일",
+      "tab": "etc",
+      "summary": "용문산 등산을 마치고 나면 항상 고민되는 게 식사 메뉴예요. 국밥이나 백숙도 좋지만, 이번엔 예전부터 눈여겨보던 평창송어회에 가족들과 들렀습니다. 바다 회랑은 확실히 결이 다른, 탱글탱글하고 담백한",
+      "thumbRemote": "https://blogthumb.pstatic.net/MjAyNjA4MTFfMTY2/MDAxNzg2NDA0NjA0NjYx.jpUa640R5vhEOZDxvod4wdQtcrsjGNjYlTK8VyGPRjQg.RJiLzZ3voRQLmj96CHViUqhLCUmDfg4Tbx37XTZ98_og.JPEG/KakaoTalk_20260811_075928633_09.jpg?type=w2",
+      "thumbLocal": null
+    },
+    {
+      "title": "한국 송어 양식의 역사가 흐르는 이유는 근본을 지킨 사람들이 있었기 때문이다",
+      "url": "https://blog.naver.com/papatrout/224374533343",
+      "date": "2026-08-10",
+      "category": "평창 원복송어 역사",
+      "tab": "history",
+      "summary": "들어가며 – 송어 양식, 그 뿌리를 다시 짚다 한국 송어 양식의 역사를 이야기할 때 빠짐없이 등장하는 주제가 바로 내수면 개발 촉진법이다. 이 법은 오늘날 우리가 당연하게 여기는 송어 양식 산업의 ",
+      "thumbRemote": "https://blogthumb.pstatic.net/MjAyNjA4MTBfNzkg/MDAxNzg2MzcyNTEzOTA4.icoJ2JmCbzH4ylE0bpGaOlwDFmZ2ikJbT8Vxx9jxQe0g.8jUe59dbG-tkV3zQ4kDYlhhHcLSxW8RSlbweWTvPKnsg.JPEG/KakaoTalk_20260810_222132154_02.jpg?type=w2",
+      "thumbLocal": null
+    },
+    {
+      "title": "평창 계방산 아래에서 만나는 한 끼, 솔대와 하늘 이야기",
+      "url": "https://blog.naver.com/papatrout/224373952441",
+      "date": "2026-08-10",
+      "category": "블로그 30일",
+      "tab": "etc",
+      "summary": "강원도 평창과 홍천의 경계에 자리한 계방산은 해발 1,577m로 오대산국립공원의 최고봉이자, 남한에서 다섯 번째로 높은 산입니다. 겨울이면 정상 부근 주목 군락지에 피어나는 눈꽃을 보러 전국에서 등",
+      "thumbRemote": "https://blogthumb.pstatic.net/MjAyNjA4MTBfMTY4/MDAxNzg2MzM4NjA2Njkx.6rJ4_qe1PZfQJJCsRZ3cskrZK_31vbRGPGD9Fhfpxq0g.QUmCrgt2XdaVe7ey51R5dYSoEA3ctuAME48syRMG6pwg.JPEG/KakaoTalk_20260807_075517293_08.jpg?type=w2",
+      "thumbLocal": null
+    },
+    {
+      "title": "양평 지평면 광탄리 맛집, 싱싱한 송어회가 생각날 땐 '평창송어회'",
+      "url": "https://blog.naver.com/papatrout/224372202824",
+      "date": "2026-08-08",
+      "category": "블로그 30일",
+      "tab": "etc",
+      "summary": "서울에서도 멀지 않으면서도 한적한 시골 풍경과 여유를 즐길 수 있는 경기도 양평, 주말 드라이브나 가족 나들이를 계획하고 있다면 용문면 광탄리에 자리한 '평창송어회'를 추천합니다. 평창군 미탄면 원",
+      "thumbRemote": "https://blogthumb.pstatic.net/MjAyNjA4MDhfMjA5/MDAxNzg2MTczOTMwMTA5.YRPUtlWNIDzDzEqu7P1jPwpP4Vr4z7_8bsdYBk8tFzYg.uFxLno8Au4YqVdX8dCdXfQDnjvMtDiT8AiPaUzEl_YQg.PNG/%3F%86%A1%3F%96%B4%3F%9A%8C%3F%8D%B8%3F%84%A4%3F%9D%BC2.png?type=w2",
+      "thumbLocal": null
+    },
+    {
+      "title": "평창 계방산 아래 캠핑 명소, '솔대와 하늘' 송어와 장어 취급 소식",
+      "url": "https://blog.naver.com/papatrout/224372099172",
+      "date": "2026-08-08",
+      "category": "블로그 30일",
+      "tab": "etc",
+      "summary": "맑은 공기와 울창한 숲, 밤이면 쏟아질 듯한 별을 만날 수 있는 강원도 평창, 그중에서도 계방산 아래는 번잡한 일상에서 잠시 벗어나 자연에 온전히 머물고 싶은 분들이 즐겨 찾는 곳인데요. 오늘은 평",
+      "thumbRemote": "https://blogthumb.pstatic.net/MjAyNjA4MDhfMTc5/MDAxNzg2MTY2ODE0OTU5.jktt83U3sYpYrrZU79js5PZhNUH71wG4rg_XjKI2Zoog.GS7SMmVwmpcu4Vu-JR8tDRgCs5gdOtPg6Vim6uQ9kyAg.PNG/%3F%86%A1%3F%96%B4%3F%9A%8C%3F%8D%B8%3F%84%A4%3F%9D%BC1.png?type=w2",
+      "thumbLocal": null
+    },
+    {
+      "title": "평창 계방산 맛집, 솔대와 하늘 처음 소개합니다",
+      "url": "https://blog.naver.com/papatrout/224370757860",
+      "date": "2026-08-06",
+      "category": "송어양식장의하루",
+      "tab": "farm",
+      "summary": "강원도 평창군 용평면 속사리, 이승복 기념관을 지나 계방산 주차장 바로 옆에 자리한 평창 계방산맛집 솔대와 하늘을 소개합니다. 등산이나 드라이브로 계방산을 찾는 분들이라면 한 번쯤 지나쳤을 법한 위",
+      "thumbRemote": "https://blogthumb.pstatic.net/MjAyNjA4MDdfMjM2/MDAxNzg2MDU5MzY1OTkz.WyLbxVRb_8cHpAiXT3FutP5OJ-6xi16WgaTDz9vZr-wg.UnGvCCSltZcs_geKAqAGWOeBY0VYJIYUozOLGh_wYaMg.PNG/image.png?type=w2",
+      "thumbLocal": null
+    },
+    {
+      "title": "평창군 식품제조협회 정기모임 현장! '솟대와 하늘'에서 함께한 따뜻하고 정겨운 시간",
+      "url": "https://blog.naver.com/papatrout/224368554107",
+      "date": "2026-08-05",
+      "category": "지역행사",
+      "tab": "event",
+      "summary": "안녕하세요! 평창의 자연과 맛, 그리고 지역 상생을 위해 늘 함께 달리는 회원 여러분! 08.04(화요일) 평창군 식품제조협회(대표: 안수예)의 뜻깊은 정기모임이 열렸습니다. 이번 모임은 특별히 우",
+      "thumbRemote": "https://blogthumb.pstatic.net/MjAyNjA4MDVfMjg5/MDAxNzg1ODg3MDM2NDcw.EKhuXVp7O7w8f3gvpx6pyCzHYGW6-ZczrblyqeiOcRIg.TTRiThQDnkFGqKuciM5lVEQOtLiivEs4cjYdPFrPBbwg.JPEG/900＿20260804＿205650.jpg?type=w2",
+      "thumbLocal": null
+    },
+    {
+      "title": "제천의 숨은 보석, 싱그러움 가득한 '갈릴리 횟집' 방문기",
+      "url": "https://blog.naver.com/papatrout/224367693791",
+      "date": "2026-08-04",
+      "category": "송어양식장의하루",
+      "tab": "farm",
+      "summary": "안녕하세요! 오늘은 원복송어양식장에서 충북 제천시에 위치한, 아주 특별한 풍경을 품은 제 거래처를 소개해 드리려고 합니다. 바로 **'갈릴리 횟집'**입니다. 업무차 방문했지만, 입구에 들어서는 순",
+      "thumbRemote": "https://blogthumb.pstatic.net/MjAyNjA4MDRfNjgg/MDAxNzg1ODEzODI4ODk3.GkkNCaiEKeqV4uSMab5FyELVuFokK4pWnDnxJN7DtAkg.a1Q3DwJKkkmOQcp3bbuSsf6jUSH6kpI1YUexzuFgqqog.JPEG/KakaoTalk_20260517_084526334.jpg?type=w2",
+      "thumbLocal": null
+    }
+  ],
+  "curatedExtra": [
+    {
+      "title": "송어 무항생제 인증 설명회 및 업무협약",
+      "date": "2025.10.29",
+      "tab": "event",
+      "image": "news/ig-mou.jpg",
+      "url": "https://www.instagram.com/p/DQdnUAnkbM0/",
+      "source": "인스타그램"
+    },
+    {
+      "title": "수원메가쇼 2024, 평창무지개송어액젓 출품",
+      "date": "2024.12",
+      "tab": "event",
+      "image": "news/ig-megashow.jpg",
+      "url": "https://www.instagram.com/p/DDL4oe9yWO4/",
+      "source": "인스타그램"
+    }
+  ],
+  "broadcast": [
+    {
+      "ch": "KBS",
+      "title": "6시 내고향 · 송어액젓 미역국과 다수리 동굴 숙성",
+      "date": "2025.11.27 방송",
+      "image": "news/tv-kbs.jpg",
+      "url": "https://blog.naver.com/papatrout/224081843426"
+    },
+    {
+      "ch": "MBC",
+      "title": "테마기행 길 · 배우 최주봉, 송어의 원조를 만나다",
+      "date": "2025.12",
+      "image": "news/tv-mbc.jpg",
+      "imagePosition": "center 30%",
+      "url": "https://blog.naver.com/papatrout/224100278320"
+    },
+    {
+      "ch": "LIVE",
+      "title": "강원도경제진흥원 라이브커머스 · 송어회 & 액젓",
+      "date": "춘천 소담스퀘어",
+      "image": "news/ig-live.jpg",
+      "imagePosition": "center 20%",
+      "url": "https://www.instagram.com/p/DQdYYyGkcSe/"
+    }
+  ],
+  "press": [
+    {
+      "media": "강원도민일보",
+      "title": "[오래된 미래 강원 노포 탐방] 63. 평창 원복 송어양식장",
+      "date": "2023.11.01",
+      "url": "https://www.kado.net/news/articleView.html?idxno=1211331"
+    },
+    {
+      "media": "현대해양",
+      "title": "내수면양식 표본… 송어양식 60년 맞아",
+      "date": "2025.07.09",
+      "url": "https://www.hdhy.co.kr/news/articleView.html?idxno=32284"
+    },
+    {
+      "media": "강원도민일보",
+      "title": "평창 송어가공식품 최초 개발 시판 본격화",
+      "date": "2022.08.24",
+      "url": "https://www.kado.net/news/articleView.html?idxno=1141212"
+    },
+    {
+      "media": "여성경제신문",
+      "title": "평창 송어의 원조 함씨 형제 이야기",
+      "date": "2022.08.20",
+      "url": "https://www.womaneconomy.co.kr/news/articleView.html?idxno=212734"
+    },
+    {
+      "media": "뉴스와이어",
+      "title": "지역 문화 상품의 새 모델 '평창 슈베르트 콘서트'",
+      "date": "2021.06.21",
+      "url": null
+    },
+    {
+      "media": "연합뉴스",
+      "title": "국내 최대 송어 양식지 평창에 '송어길' 생겼다",
+      "date": "2018.11.12",
+      "url": "https://www.yna.co.kr/view/AKR20181112045200062"
+    }
+  ],
+  "instagram": {
+    "handle": "@pyeongchang_love",
+    "stats": "게시물 2,141 · 팔로워 3,776 (2026-11-15)",
+    "statsConfirm": true,
+    "posts": [
+      {
+        "image": "news/ig-sashimi.jpg",
+        "caption": "육백마지기 청정1급수 송어회와 튀김",
+        "url": "https://www.instagram.com/p/DQIvlIgkZfw/"
+      },
+      {
+        "image": "news/ig-kimjang.jpg",
+        "caption": "김장엔 고랭지 배추와 송어액젓",
+        "url": "https://www.instagram.com/p/DRFpy3WEySI/"
+      },
+      {
+        "image": "news/ig-stream.jpg",
+        "caption": "청옥산 아래 창리천 1급수",
+        "url": "https://www.instagram.com/p/DQI2WqqjyF1/"
+      },
+      {
+        "image": "news/ig-sashimi-aekjeot.jpg",
+        "caption": "송어회에 송어액젓 한 종지",
+        "url": "https://www.instagram.com/pyeongchang_love/"
+      },
+      {
+        "image": "news/ig-mou.jpg",
+        "caption": "무항생제 송어 협약",
+        "url": "https://www.instagram.com/p/DQdnUAnkbM0/"
+      },
+      {
+        "image": "news/ig-megashow.jpg",
+        "caption": "수원메가쇼 출품",
+        "url": "https://www.instagram.com/p/DDL4oe9yWO4/"
+      }
+    ]
+  },
+  "threads": {
+    "handle": "@pyeongchang_love",
+    "stats": "팔로워 2,140",
+    "posts": [
+      {
+        "date": "2026.11",
+        "text": "이런 나무 울타리를 본 적이 있나? 나는 추운 평창에 산다. 어릴 적 강릉에서 보았던 나무 울타리를 보니 옛 추억이 떠올랐다."
+      },
+      {
+        "date": "2026.11",
+        "text": "모두 추워서 몸을 사리는데 이 붉은 열매는 주변을 화사하게 수 놓는다. 이 열매의 이름은?"
+      }
+    ]
+  },
+  "psarang": {
+    "note": "평창사랑 블로그 최근 글은 2023년. RSS로 읽되 2024년 이전 글만 있으면 섹션 제목 아래 '지난 소식' 표시",
+    "fallbackPosts": [
+      {
+        "title": "[종료] 평창사랑 옥수수 & 감자꾸러미 판매 안내",
+        "url": "https://blog.naver.com/durepcsarang/223162286303",
+        "date": "2023-07-21",
+        "category": "평창사랑(주)"
+      },
+      {
+        "title": "평창사랑 당일치기 물반고기반 송어낚시체험 OPEN!!",
+        "url": "https://blog.naver.com/durepcsarang/223104660670",
+        "date": "2023-05-17",
+        "category": "평창사랑(주)"
+      },
+      {
+        "title": "[체험후기] 강원도 평창여행 코스 고민된다면 평창사랑은 어떨까요? 평창바위공원 캠핑장에",
+        "url": "https://blog.naver.com/durepcsarang/223079385445",
+        "date": "2023-04-19",
+        "category": "체험후기"
+      },
+      {
+        "title": "[체험후기] 평창 사랑 원복 송어 플라이낚시 체험 장암산 활공장 평창 바위공원 등",
+        "url": "https://blog.naver.com/durepcsarang/223079384783",
+        "date": "2023-04-19",
+        "category": "체험후기"
+      },
+      {
+        "title": "[체험후기] 강원도 평창여행 코스 평창사랑 농장체험 하세요.",
+        "url": "https://blog.naver.com/durepcsarang/223079384072",
+        "date": "2023-04-19",
+        "category": "체험후기"
+      },
+      {
+        "title": "[체험후기] [평창여행] 평창사랑에서 송어낚시 체험",
+        "url": "https://blog.naver.com/durepcsarang/223079383329",
+        "date": "2023-04-19",
+        "category": "체험후기"
+      }
+    ]
+  }
+}
