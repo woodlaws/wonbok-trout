@@ -155,7 +155,7 @@ export function News() {
 }
 
 export function Visit() {
-  const appKey = process.env.KAKAO_MAP_JS_KEY?.trim();
+  const appKey = process.env.KAKAO_MAP_JAVASCRIPT_KEY?.trim() || process.env.KAKAO_MAP_JS_KEY?.trim();
   const mapLink = <Out href={kakaoLocation} className="visit-map"><Photo file="farm.jpg" alt={contact.farmName + ' 전경'}/><span className="visit-map-label">카카오맵에서 위치 보기 ↗</span></Out>;
   return <section className="visit"><div className="wrap grid">
     {appKey ? <KakaoMap appKey={appKey} latitude={latitude} longitude={longitude} name={contact.farmName}>{mapLink}</KakaoMap> : mapLink}
