@@ -400,3 +400,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible,t
 .visit-map img{position:absolute;inset:0;z-index:-1;width:100%;height:100%;object-fit:cover}
 .visit-map-label{display:inline-flex;align-items:center;min-height:52px;padding:10px 18px;border-radius:999px;background:#fff;color:var(--ink);font-size:17px;font-weight:800;white-space:nowrap}
 @media(max-width:640px){.visit-map{min-height:240px;padding:16px}}
+.naver-map{position:relative;display:grid;overflow:hidden;border-radius:22px}
+.naver-map-canvas{position:absolute;inset:0;visibility:hidden}
+.naver-map-canvas[data-ready=true]{visibility:visible}
+.naver-map:has(.naver-map-canvas[data-ready=true]) .visit-map{visibility:hidden}

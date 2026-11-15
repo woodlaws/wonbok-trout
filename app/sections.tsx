@@ -1,4 +1,5 @@
 import type { ReactNode } from 'react';
+import { NaverMap } from './naver-map';
 import credits from '../_handoff/data/wikimedia_credits.json';
 import { address, brand, contact, data, links, navigation, phone, products, visible } from './site';
 
@@ -149,8 +150,13 @@ export function News() {
 }
 
 export function Visit() {
+  const clientId = process.env.NAVER_MAP_CLIENT_ID?.trim();
+  const coordinates = process.env.NAVER_MAP_COORDINATES?.split(',').map(value => value.trim() ? Number(value) : NaN);
+  const [latitude, longitude] = coordinates?.length === 2 ? coordinates : [NaN, NaN];
+  const mapConfigured = clientId && Math.abs(latitude) <= 90 && Math.abs(longitude) <= 180;
+  const mapLink = <Out href={links.naverMap} className="visit-map"><Photo file="farm.jpg" alt={contact.farmName + ' 전경'}/><span className="visit-map-label">네이버 지도에서 위치 보기 ↗</span></Out>;
   return <section className="visit"><div className="wrap grid">
-    <Out href={links.naverMap} className="visit-map"><Photo file="farm.jpg" alt={contact.farmName + ' 전경'}/><span className="visit-map-label">네이버 지도에서 위치 보기 ↗</span></Out>
+    {mapConfigured ? <NaverMap clientId={clientId} latitude={latitude} longitude={longitude} name={contact.farmName}>{mapLink}</NaverMap> : mapLink}
     <div className="info"><p className="eyebrow">오시는 길</p><h2 className="h2">{contact.farmName}</h2>
       <dl>{address && <><dt>주소</dt><dd>{address}</dd></>}{phone && <><dt>전화</dt><dd><a href={'tel:' + phone}>{phone}</a></dd></>}
         <dt>휴무</dt><dd>{contact.closed}</dd><dt>편의</dt><dd>{contact.amenities}</dd>{visible(contact.direction) && <><dt>가는 길</dt><dd>{contact.direction.text}</dd></>}
